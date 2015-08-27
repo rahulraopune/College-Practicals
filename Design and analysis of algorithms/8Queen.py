@@ -1,7 +1,4 @@
-#Name – Tejaswini Changal
-#Class – BE A
-#Roll no. - 118
-#---------------------------------------------------------------
+
 board = []
 size = 8
 number = 0.
