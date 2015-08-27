@@ -50,7 +50,7 @@ int main()
       int a[100],n,l,h,i;
       cout<<"Enter number of elements:";
       cin>>n;
-      cout<<"Enter the elements (Use Space As A Separator):";
+      cout<<"Enter the elements ";
       for(i=0;i<n;i++)
       cin>>a[i];
       cout<<"\nInitial Array:\n";
@@ -72,7 +72,7 @@ int main()
 
 /* OUTPUT:
 Enter number of elements:4 
-Enter the elements (Use Space As A Separator):3 8 1 4 
+Enter the elements :3 8 1 4 
 Initial Array: 3 8 1 4 
 After Sorting: 1 3 4 8 
 */ 
