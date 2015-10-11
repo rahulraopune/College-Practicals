@@ -1,18 +1,23 @@
-// A Dynamic Programming based solution for 0-1 Knapsack problem
 #include<stdio.h>
 
-// A utility function that returns maximum of two integers
-int max(int a, int b) { return (a > b)? a : b; }
+int max(int a, int b) 
+{ 
+	if(a>b)
+	{
+		return a;
+	}
+	else
+	{
+		return b;
+	}
+}
 
-//int table[5][6];
-
-// Returns the maximum value that can be put in a knapsack of capacity W
 int knapSack(int W, int wt[], int val[], int n)
 {
    int i, w,j,k;
    int table[n+1][W+1];
 
-   // Build table K[][] in bottom up manner
+  
    for (i = 0; i <= n; i++)
    {
        for (j = 0; j <= W; j++)
