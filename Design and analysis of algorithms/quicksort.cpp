@@ -1,5 +1,6 @@
 #include<iostream>
-#include<conio.h>
+#include<omp.h>
+
 using namespace std;
 
 //Function for partitioning array
@@ -40,8 +41,13 @@ void quick(int l,int h,int *a)
   if(l<h)
   {
           index=part(l,h,a);
-          quick(l,index-1,a);
-          quick(index+1,h,a);
+          #pragma omp parallel sections num_threads(2)
+          {
+          	#pragma omp section
+          	quick(l,index-1,a);
+          	#pragma omp section
+          	quick(index+1,h,a);
+          }
   }
 }
 
@@ -66,7 +72,7 @@ int main()
       {
                 cout<<a[i]<<"\t";
       }
-      getch();
+     
       return 0;
 }
 

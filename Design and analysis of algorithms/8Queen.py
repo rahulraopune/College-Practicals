@@ -1,7 +1,7 @@
 
 board = []
 size = 8
-number = 0.
+number = 0
 
 def place(row, col):
     for (i, j) in board:
